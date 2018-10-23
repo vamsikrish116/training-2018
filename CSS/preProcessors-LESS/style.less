@@ -1,0 +1,108 @@
+@import "parentStyle";
+
+@bg-color:#f3f3f3;
+@text-color:#333;
+
+@ul-bg-color:skyblue;
+@li-bg-color:#fff;
+
+@div-width: 100px;
+@div-color:#03A9F4;
+
+p{
+    background-color: @bg-color;
+    color: @text-color;
+    padding:15px;
+}
+
+ul{
+    background-color: @bg-color;
+}
+
+li{
+    color: @text-color;
+}
+
+#circle(){
+    background-color: red;
+    border-radius: 100%;
+}
+
+#small-circle{
+    width:50px;
+    height: 50px;
+    #circle;
+}
+
+#big-circle{
+    width:100px;
+    height:100px;
+    #circle;
+}
+
+
+#circle2(@size:25px){
+    background-color: green;
+    border-radius: 100%;
+    width: @size;
+    height: @size;
+}
+
+#small-circle2{
+    #circle2;
+}
+
+#big-circle2{
+    #circle2(100px);
+}
+
+ul{
+    background-color: @ul-bg-color;
+    padding: 10px;
+    list-style: none;
+    li{
+        background-color: @li-bg-color;
+        border-radius: 3px;
+        margin:10px 0;
+    }
+}
+
+div.rect{
+    height: 50px;
+    display: inline-block;
+}
+
+#left{
+    width: @div-width;
+    background-color: @div-color - 100;
+}
+
+#right{
+    width: @div-width * 2;
+    background-color: @div-color;
+}
+
+@var:red;
+
+div.foot{
+    height: 50px;
+    width:50px;
+    background-color: @var;
+
+    &:hover{
+        background-color: fadeout(@var, 50%)
+    }
+}
+
+/*These are scope values*/
+@colors:red;
+div.demoScope{
+@colors:green;
+p{
+    @colors:blue;
+    span{
+        color:@colors;
+
+    }
+}
+}

@@ -1,0 +1,82 @@
+@import "parentStyle.scss";
+
+$title-font: normal 24px/1.5 'Open Sans', sans-serif;
+$cool-red: #F44336;
+
+h1.title {
+  font: $title-font;
+  color: $cool-red;
+}
+
+div.container {
+  color: $cool-red;
+  background: green;
+  width: 50px;
+  height: 50px;
+}
+
+@mixin square($size, $color){
+width: $size;
+height: $size;
+background-color: $color;
+}
+
+.small-square{
+@include square(50px, red);
+}
+
+.large-square{
+@include square(150px, green);
+}
+
+.button-sample{
+color: white;
+padding:12px 40px;
+cursor: pointer;
+}
+
+.confirm{
+  @extend .button-sample;
+  background-color: red;
+  float: left;
+}
+
+
+.cancel{
+  @extend .button-sample;
+  background-color: green;
+  float: right;
+}
+
+
+ul{
+  list-style: none;
+  li{
+    padding: 15px;
+    background-color: grey;
+    a{
+      text-decoration: none;
+      font-size: 15px;
+      color: violet;
+      background-color: green;
+      &:hover{
+        background-color: darken(pink , 10%);
+      } 
+    }
+  }
+}
+
+$widthDiv: 200px;
+$heightDiv:200px;
+.smallDiv{
+width: $widthDiv;
+height: $heightDiv;
+background-color: green;
+margin: 30px;
+}
+
+.bigDiv{
+  width: $widthDiv * 2;
+  height: $heightDiv * 4;
+  background-color: green;
+}

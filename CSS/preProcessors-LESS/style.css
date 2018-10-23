@@ -1,0 +1,72 @@
+body {
+  background-color: pink;
+}
+p {
+  background-color: #f3f3f3;
+  color: #333;
+  padding: 15px;
+}
+ul {
+  background-color: #f3f3f3;
+}
+li {
+  color: #333;
+}
+#small-circle {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 100%;
+}
+#big-circle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 100%;
+}
+#small-circle2 {
+  background-color: green;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+}
+#big-circle2 {
+  background-color: green;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+ul {
+  background-color: skyblue;
+  padding: 10px;
+  list-style: none;
+}
+ul li {
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+div.rect {
+  height: 50px;
+  display: inline-block;
+}
+#left {
+  width: 100px;
+  background-color: #004590;
+}
+#right {
+  width: 200px;
+  background-color: #03A9F4;
+}
+div.foot {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+div.foot:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+/*These are scope values*/
+div.demoScope p span {
+  color: blue;
+}
