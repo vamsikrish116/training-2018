@@ -9,9 +9,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!-- This is heading section-->
-    <h1>JavaScript Essentials</h1>
+<body onload="showDate();" id="body">
+    <h1 id="mainHead">JavaScript Essentials</h1>
+    <div class="container">
+        <button class="button" onclick="clickMe();">Click Me</button>
+        <button class="button" onmousemove="changeText(this);">Click Me</button>
+        <button class="button" onmouseover="changeHead(this);" onmouseout="changeHead2();">display Date</button>
+    </div>
+
+    <select name="" id="" onchange="changeBack(this);">
+        <option value="">select</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <br>
+    <br>
+    <form action="index.php" name="myForm" onsubmit="validateForm();">
+        <div>
+            <label for="">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    
     <script src="main.js"></script>
 </body>
 

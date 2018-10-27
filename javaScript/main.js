@@ -1,3 +1,4 @@
+/*
 //String
 var name = 'Gopi babu';
 console.log(typeof (name));
@@ -52,7 +53,8 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    return a / b;
+    var result = a/b;
+    return result;
 }
 
 function Mod(a, b) {
@@ -121,3 +123,173 @@ switch (fruit) {
 }
 
 console.log('ended switch');
+*/
+/**Difference betweeen let and var */
+/** 
+var score = 50;
+
+function getScore() {
+    var score = 100;
+    console.log(score);
+}
+
+getScore();
+console.log(score);
+*/
+
+/**Objects */
+/*
+var person = {
+    firstName: 'gopibabu',
+    lastName: 'Srungavarapu',
+    age: 26,
+    children: ['viswas', 'vivek'],
+    address: {
+        street: 'Main Road',
+        city: 'Prakasam',
+        country: 'India',
+        pin: 523169
+    },
+    fullName: function(){
+        return this.firstName + ' ' + this.lastName;
+    },
+    fullName2: () => {
+        let first =  person.firstName + 'sam';
+        return first + ' ' + person.lastName;
+    },
+    fullName3: () => person.firstName + ' ' + person.lastName
+}
+
+console.log(person);
+console.log(person.fullName());
+console.log(person.address.country);
+console.log(person.children[0]);
+console.log(person.age);
+console.log(person.fullName());
+console.log(person.fullName2());
+console.log(person.fullName3());
+*/
+
+/**Object Literal */
+/** 
+var apple = new Object();
+apple.color = 'red';
+apple.cost = 5;
+apple.types = ['shimla', 'kashmir'];
+apple.info = {
+    size: 'small',
+    age: 10,
+    state: 'california'
+}
+apple.getInfo = function(){
+    return 'Apple color is '+ apple.color + 'and its cost is ' + apple.cost;
+}
+
+console.log(apple.getInfo());
+*/
+/** Constructor Pattern */
+/** 
+function fruit(name, color, shape) {
+    this.color = color;
+    this.name = name;
+    this.shape = shape;
+    this.describe = function(){
+        return this.name + ' ' + this.shape;
+    }
+}
+var appleInfo = new fruit('apple', 'red', 'round');
+console.log(appleInfo);
+console.log(appleInfo.describe());
+*/
+
+/**Loops */
+/** 
+for (var i = 0; i < 10; i++) {
+    //console.log(i);
+}
+
+var numbers = [1, 2, 3, 4, 5, 6];
+for (var i = 0; i <= 5; i++) {
+    //console.log(i);
+}
+
+var i = 0;
+while (i < numbers.length) {
+    //console.log(i);
+    i++;
+}
+
+numbers.forEach(function (num) {
+    //console.log(num);
+});
+
+var users = [
+    {
+        name: 'gopi',
+        age:  26
+    },
+    {
+        name: 'vamsi',
+        age: 24
+    },
+    {
+        name: 'dattu',
+        age: 23
+    },
+];
+
+users.forEach((user) => {
+    console.log(user.name);
+    console.log(user.age);
+});
+*/
+/**Events */
+/** 
+function clickMe() {
+    alert('changed');
+}
+
+function changeText(button) {
+    button.innerHTML = 'text Changed';
+}
+
+function showDate(button) {
+    var head1 = document.getElementById('mainHead');
+    console.log(head1);
+}
+
+function changeHead(button) {
+    var head1 = document.getElementById('mainHead');
+    head1.innerHTML = Date();
+}
+
+function changeHead2(button) {
+    var head1 = document.getElementById('mainHead');
+    head1.innerHTML = 'JavaScript Essentials';
+}
+
+function changeBack(x) {
+    var body = document.getElementById('body');
+    body.style.background = x.value;
+}
+
+function validateForm() {
+    var name = document.forms['myForm']['name'].value;
+    var email = document.forms['myForm']['email'].value;
+    if (name.length < 3) {
+        alert('please enter proper name');
+        return false;
+    }
+    if (email.length > 10) {
+        alert('please enter normal email');
+        return false;
+    }
+}
+*/
+const name = 'gopibabu';
+
+console.log(name);
+
+const name2 = new String('vamsi');
+console.log(typeof(name2));
+console.log(name2.length);
